@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PublishAot>true</PublishAot>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AoCHelper" Version="4.0.0" />
+    <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.4.0-preview3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Inputs/01.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Inputs/02.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Inputs/02.Sample.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Inputs/02.Sample.4.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Inputs\Day01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Inputs\04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Remove="Program_old.cs" />
+    <None Include="Program_old.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Inputs\05.txt" />
+    <Content Include="Inputs\05.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Inputs\06.txt" />
+    <Content Include="Inputs\06.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
